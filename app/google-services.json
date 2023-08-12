@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "287968119840",
+    "project_id": "enviroteer",
+    "storage_bucket": "enviroteer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287968119840:android:1f98e8395e8a4017b5c045",
+        "android_client_info": {
+          "package_name": "com.enviroteer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287968119840-lig803j6p2rt2cfh667qerrpk7a3h3vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8drABWJYmZrLU0joQAcw3B3eKUoRh8eY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287968119840-lig803j6p2rt2cfh667qerrpk7a3h3vs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
