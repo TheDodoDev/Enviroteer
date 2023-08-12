@@ -21,7 +21,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.enviroteer.databinding.FragmentNotificationsBinding;
-import com.google.firebase.storage.StorageReference;
+import com.enviroteer.ui.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
 
@@ -41,6 +42,14 @@ public class NotificationsFragment extends Fragment {
         imageView = binding.profileImg;
         final TextView profileName = binding.profileName;
         final Button profileButton = binding.profileLogout;
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
