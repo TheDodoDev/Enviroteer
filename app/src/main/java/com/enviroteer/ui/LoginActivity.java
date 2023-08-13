@@ -29,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText loginEmail, loginPassword, registerUsername, registerEmail, registerPassword, registerConfirmPassword;
     private Button buttonLogin, buttonRegister;
+    private View loginLine,registerLine;
 
     private String email;
     private String password;
@@ -51,8 +52,11 @@ public class LoginActivity extends AppCompatActivity {
 
         loginLayout = findViewById(R.id.login_layout);
         registerLayout = findViewById(R.id.register_layout);
+        loginLine = findViewById(R.id.loginLine);
+        registerLine = findViewById(R.id.registerLine);
         LoginOption = findViewById(R.id.btn_login_option);
         RegisterOption = findViewById(R.id.btn_register_option);
+
 
 
         loginEmail = findViewById(R.id.login_email);
@@ -70,7 +74,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (loginLayout.getVisibility() != View.VISIBLE) {
+                    registerLine.setVisibility(View.INVISIBLE);
                     registerLayout.setVisibility(View.GONE);
+                    loginLine.setVisibility(View.VISIBLE);
                     loginLayout.setVisibility(View.VISIBLE);
                 }
             }
@@ -80,7 +86,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (registerLayout.getVisibility() != View.VISIBLE) {
+                    loginLine.setVisibility(View.INVISIBLE);
                     loginLayout.setVisibility(View.GONE);
+                    registerLine.setVisibility(View.VISIBLE);
                     registerLayout.setVisibility(View.VISIBLE);
                 }
             }
