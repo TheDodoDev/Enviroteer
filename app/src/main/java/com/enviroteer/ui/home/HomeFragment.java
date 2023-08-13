@@ -9,29 +9,33 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.enviroteer.databinding.FragmentHomeBinding;
+import com.enviroteer.MainActivity;
+import com.enviroteer.R;
+import com.enviroteer.ui.Detail;
+import com.enviroteer.ui.DetailStorage;
+
+import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        DetailStorage detailStorage = new DetailStorage();
+        recyclerView.setAdapter(new MyAdapter(view.getContext(), detailStorage.getDetails()));
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        return view;
     }
+
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
     }
 }
