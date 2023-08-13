@@ -5,11 +5,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:elevation="10dp"
+    android:padding="10dp"
     app:cardCornerRadius="10dp">
 
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/light_green"
         android:orientation="vertical">
 
         <TextView
@@ -51,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/mm_dd_yyyy"
                 android:textColor="@color/black"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -74,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="start time"
                 android:textColor="@color/black"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -97,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="end time"
                 android:textColor="@color/black"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="5dp"
                 android:textSize="20sp" />
         </LinearLayout>
         <TextView
