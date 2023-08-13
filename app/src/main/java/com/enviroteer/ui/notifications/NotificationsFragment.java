@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.enviroteer.databinding.FragmentNotificationsBinding;
+import com.enviroteer.ui.DashboardActivity;
 import com.enviroteer.ui.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -40,8 +41,17 @@ public class NotificationsFragment extends Fragment {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         imageView = binding.profileImg;
+        final Button dashboardButton = binding.profileDashboard;
         final TextView profileName = binding.profileName;
         final Button profileButton = binding.profileLogout;
+        profileName.setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());
+        dashboardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

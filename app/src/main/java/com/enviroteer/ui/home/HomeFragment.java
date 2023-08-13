@@ -14,15 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.enviroteer.MainActivity;
 import com.enviroteer.R;
-import com.enviroteer.databinding.FragmentHomeBinding;
 import com.enviroteer.ui.Detail;
 import com.enviroteer.ui.DetailStorage;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
-
-    private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -40,6 +37,5 @@ public class HomeFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
     }
 }

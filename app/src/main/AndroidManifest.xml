@@ -20,16 +20,16 @@
         <activity
             android:name=".ui.MapActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Enviroteer"/>
         <activity
             android:name=".ui.CreateVolunteerProgram"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar"/>
+            android:theme="@style/Theme.Enviroteer"/>
 
         <activity
             android:name=".ui.DashboardActivity"
             android:exported="false"
-            android:theme="@style/Theme.Design.Light.NoActionBar" />
+            android:theme="@style/Theme.Enviroteer" />
         <activity
             android:name=".ui.SplashScreenActivity"
             android:exported="true"
