@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Detail {
-    public String name, description, location, date;
-    public String startTime, endTime;
+    public String name, description, location, date, startTime, endTime;
     public ArrayList<String> participants;
 
     public Detail(String name, String description, String location, String date, String startTime, String endTime) {
@@ -21,30 +20,54 @@ public class Detail {
         participants = new ArrayList<>();
     }
 
-    public void setDescription(String description)
-    {
-        this.description = description;
+    public String getName() {
+        return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setDate(String date)
-    {
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public void setStartTime(String startTime)
-    {
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public void setEndTime(String endTime)
-    {
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
     public void addParticipants(String username)
     {
         participants.add(username);

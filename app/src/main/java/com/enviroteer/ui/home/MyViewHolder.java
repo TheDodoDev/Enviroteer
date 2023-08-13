@@ -14,14 +14,16 @@ import com.enviroteer.ui.Detail;
 
 public class MyViewHolder extends RecyclerView.ViewHolder {
     Detail detail;
-    TextView eventName, location, dateTime;
+    TextView eventName, description, startTime, endTime, location, date;
     Button signUp, more;
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         eventName = itemView.findViewById(R.id.event_name);
-        location = itemView.findViewById(R.id.location);
-        dateTime = itemView.findViewById(R.id.date_time);
-
+        description = itemView.findViewById(R.id.event_description);
+        location = itemView.findViewById(R.id.event_location);
+        startTime = itemView.findViewById(R.id.startTime);
+        endTime = itemView.findViewById(R.id.endTime);
+        date = itemView.findViewById(R.id.date);
         signUp = itemView.findViewById(R.id.sign_up_button);
         more = itemView.findViewById(R.id.more_detail_button);
 

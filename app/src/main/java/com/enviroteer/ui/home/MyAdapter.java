@@ -35,9 +35,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.detail = details.get(position);
-        holder.eventName.setText(details.get(position).name);
-        holder.location.setText(details.get(position).location);
-        holder.more.setText(details.get(position).date);
+        holder.eventName.setText(details.get(position).getName());
+        holder.location.setText(details.get(position).getLocation());
+        holder.endTime.setText(details.get(position).getEndTime());
+        holder.startTime.setText(details.get(position).getStartTime());
+        holder.date.setText(details.get(position).getDate());
+        holder.description.setText(details.get(position).getDescription());
     }
 
     @Override
