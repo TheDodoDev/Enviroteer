@@ -24,6 +24,7 @@ public class DashboardActivity extends AppCompatActivity {
     private View viewUpcomingLine, viewHostedLine;
     private View upcomingRecyclerView;
     private View hostedRecyclerView;
+    private Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         upcomingRecyclerView = findViewById(R.id.upcoming_recycler_view);
         hostedRecyclerView = findViewById(R.id.hosted_recycler_view);
+        extras = getIntent().getExtras();
 
         upcomingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,10 +76,18 @@ public class DashboardActivity extends AppCompatActivity {
     }
     public void initRecyclerView(){
         upcomingPrograms = new ArrayList<Detail>();
-        upcomingPrograms.add(new Detail("Spotless Pashupati Initiative", "Pashpatinath, a national heritage of Nepal, is not so clean as it should have been. We are organizing a program to make it clean and green. Come join us!","Pashupatinath, Nepal", "14/08/2023","11:00", "18:00"));
-
+        upcomingPrograms.add(new Detail("Spotless Pashupati Initiative", "Pashpatinath, a national heritage of Nepal, is not so clean as it should have been. We are organizing a program to make it clean and green. Come join us!","Pashupatinath, Nepal", "08/14/2023","11:00", "18:00"));
+        if(extras != null) {
+            String name = extras.getString("name");
+            String location = extras.getString("location");
+            String date = extras.getString("date");
+            String startTime = extras.getString("startTime");
+            String endTime = extras.getString("endTime");
+            String description = extras.getString("description");
+            upcomingPrograms.add(new Detail(name, description, location, date, startTime, endTime));
+        }
         hostedPrograms = new ArrayList<>();
-        hostedPrograms.add(new Detail("Chovar Will Be Green Again!", "Chovar has lost its greenary in the last few years. Shall we make it green again?","Chovar, Nepal", "29/07/2023","10:00", "18:00"));
+        hostedPrograms.add(new Detail("Chovar Will Be Green Again!", "Chovar has lost its greenary in the last few years. Shall we make it green again?","Chovar, Nepal", "07/29/2023","10:00", "18:00"));
 
         MyAdapterDash listAdapterSignedUp = new MyAdapterDash(getApplicationContext(), upcomingPrograms);
         RecyclerView recyclerViewSignedUp = findViewById(R.id.upcoming_recycler_view);

@@ -22,6 +22,8 @@ public class CreateVolunteerProgram extends AppCompatActivity {
     private static final int REQUEST_LOCATION = 2;
     private TextInputEditText editVolunteerName;
     private TextInputEditText editVolunteerDate;
+    private TextInputEditText editVolunteerStartTime;
+    private TextInputEditText editVolunteerEndTime;
     private TextInputEditText editVolunteerLocation;
     private TextInputEditText editVolunteerDescription;
     private ImageView imageVolunteer;
@@ -33,9 +35,11 @@ public class CreateVolunteerProgram extends AppCompatActivity {
 
         editVolunteerName = findViewById(R.id.editVolunteerName);
         editVolunteerDate = findViewById(R.id.editVolunteerDate);
+        editVolunteerStartTime = findViewById(R.id.editVolunteerStartTime);
+        editVolunteerEndTime = findViewById(R.id.editVolunteerEndTime);
         editVolunteerLocation = findViewById(R.id.editVolunteerLocation);
         editVolunteerDescription = findViewById(R.id.editVolunteerDescription);
-        imageVolunteer = findViewById(R.id.imageVolunteer);
+        /*imageVolunteer = findViewById(R.id.imageVolunteer);
 
         Button btnSelectImage = findViewById(R.id.btnSelectImage);
         btnSelectImage.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +47,7 @@ public class CreateVolunteerProgram extends AppCompatActivity {
             public void onClick(View v) {
                 selectImageFromGallery();
             }
-        });
+        });*/
 
         Button btnSave = findViewById(R.id.btnSaveVolunteerActivity);
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +91,8 @@ public class CreateVolunteerProgram extends AppCompatActivity {
                     double lng = data.getDoubleExtra("lng", 0);
 
 
-                    String locationText = "Lat: " + lat + ", Lng: " + lng;
-                    editVolunteerLocation.setText(locationText);
+                    /*String locationText = "Lat: " + lat + ", Lng: " + lng;
+                    editVolunteerLocation.setText(locationText);*/
                 }
                 break;
 
@@ -102,14 +106,23 @@ public class CreateVolunteerProgram extends AppCompatActivity {
     private void saveData() {
         String name = editVolunteerName.getText().toString();
         String date = editVolunteerDate.getText().toString();
+        String endTime = editVolunteerEndTime.getText().toString();
+        String startTime = editVolunteerStartTime.getText().toString();
         String location = editVolunteerLocation.getText().toString();
         String description = editVolunteerDescription.getText().toString();
-
+        Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("date", date);
+        intent.putExtra("startTime", startTime);
+        intent.putExtra("endTime", endTime);
+        intent.putExtra("location", location);
+        intent.putExtra("description", description);
+        startActivity(intent);
         // Convertir la imagen del ImageView a ByteArray para Firebase
-        Bitmap bitmap = ((BitmapDrawable) imageVolunteer.getDrawable()).getBitmap();
+        /*Bitmap bitmap = ((BitmapDrawable) imageVolunteer.getDrawable()).getBitmap();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-        byte[] imageData = baos.toByteArray();
+        byte[] imageData = baos.toByteArray();*/
 
 
     }

@@ -45,11 +45,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Date"
-                android:inputType="date" />
+                android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editVolunteerStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Start Time"
+                android:inputType="text" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editVolunteerEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="End Time"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -92,26 +116,6 @@
                 android:minHeight="100dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        <ImageView
-            android:id="@+id/imageVolunteer"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-
-            android:contentDescription="Imagen de la actividad" />
-
-        <Button
-            android:id="@+id/btnSelectImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Upload Image"
-            android:backgroundTint="@android:color/holo_green_dark"/>
-
-
 
         <Button
             android:id="@+id/btnSaveVolunteerActivity"
