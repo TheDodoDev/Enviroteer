@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        tools:text="Event Name" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_name"
+        android:layout_marginTop="0dp"
+        tools:text="Location" />
+
+    <TextView
+        android:id="@+id/date_time"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        tools:text="MM/DD/YYYY HH:MM-HH:MM"
+        android:layout_below="@id/location"
+        />
+
+
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/location"
+        android:background="@color/eco_green"
+        android:backgroundTint="@color/eco_green"
+        android:clickable="true"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        tools:text="Sign Up" />
+
+    <Button
+        android:id="@+id/more_detail_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_toRightOf="@+id/sign_up_button"
+        android:clickable="true"
+        android:textSize="12sp"
+        tools:text="More" />
+
+</RelativeLayout>
