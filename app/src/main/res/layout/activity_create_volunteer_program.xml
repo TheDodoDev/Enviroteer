@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:spacing="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Host a program"
+            android:textColor="#74bc44"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editVolunteerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Program name"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Fecha -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editVolunteerDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                android:inputType="date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editVolunteerLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnSelectLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Select"
+                android:backgroundTint="@android:color/holo_green_dark"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editVolunteerDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:maxLength="200"
+                android:minHeight="100dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageView
+            android:id="@+id/imageVolunteer"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+
+            android:contentDescription="Imagen de la actividad" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Upload Image"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+
+
+        <Button
+            android:id="@+id/btnSaveVolunteerActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="Save" />
+
+    </LinearLayout>
+
+</ScrollView>
