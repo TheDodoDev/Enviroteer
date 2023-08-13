@@ -68,6 +68,7 @@ public class DashboardActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(DashboardActivity.this, CreateVolunteerProgram.class);
                 startActivity(intent);
+                finish();
             }
         });
 

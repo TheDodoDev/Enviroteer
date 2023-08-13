@@ -118,6 +118,7 @@ public class CreateVolunteerProgram extends AppCompatActivity {
         intent.putExtra("location", location);
         intent.putExtra("description", description);
         startActivity(intent);
+        finish();
         // Convertir la imagen del ImageView a ByteArray para Firebase
         /*Bitmap bitmap = ((BitmapDrawable) imageVolunteer.getDrawable()).getBitmap();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
